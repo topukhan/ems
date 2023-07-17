@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/dashbord', function () {
+Route::get('/', function () {
     return view('backend.dashboard');
 });
+
+Route::resource('/students',StudentController::class);
