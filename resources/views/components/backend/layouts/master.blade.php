@@ -7,12 +7,12 @@
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 <title>:: Alpino :: Home</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
-<link rel="stylesheet" href="{{('ui/backend/assets/plugins/bootstrap/css/bootstrap.min.css')}}">
-<link rel="stylesheet" href="{{('ui/backend/assets/plugins/morrisjs/morris.css')}}" />
-<link rel="stylesheet" href="{{('ui/backend/assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css')}}"/>
+<link rel="stylesheet" href="{{asset('ui/backend/assets/plugins/bootstrap/css/bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('ui/backend/assets/plugins/morrisjs/morris.css')}}" />
+<link rel="stylesheet" href="{{asset('ui/backend/assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css')}}"/>
 <!-- Custom Css -->
-<link rel="stylesheet" href="{{('ui/backend/assets/css/main.css')}}">
-<link rel="stylesheet" href="{{('ui/backend/assets/css/color_skins.css')}}">
+<link rel="stylesheet" href="{{asset('ui/backend/assets/css/main.css')}}">
+<link rel="stylesheet" href="{{asset('ui/backend/assets/css/color_skins.css')}}">
 </head>
 <body class="theme-black">
 
@@ -20,7 +20,7 @@
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
-        {{-- <div class="m-t-30"><img src="{{('ui/backend/assets/images/logo.svg" width="48" height="48" alt="Alpino"')}}"></div> --}}
+        {{-- <div class="m-t-30"><img src="{{asset('ui/backend/assets/images/logo.svg" width="48" height="48" alt="Alpino"')}}"></div> --}}
         <div class="m-t-30"><img src="https://d20x1nptavktw0.cloudfront.net/wordpress_media/2022/07/blog-image-16-750x536.png" width="500" height="350" alt="Exam"></div>
         <p>Please wait...</p>        
     </div>
@@ -126,7 +126,19 @@
 
 
 <!-- Jquery Core Js -->
-@stack('js')
+{{-- @stack('js') --}}
+        <script src="{{asset('ui/backend/assets/bundles/libscripts.bundle.js')}}"></script> <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
+        <script src="{{asset('ui/backend/assets/bundles/vendorscripts.bundle.js')}}"></script> <!-- slimscroll, waves Scripts Plugin Js -->
+        
+        <script src="{{asset('ui/backend/assets/bundles/knob.bundle.js')}}"></script> <!-- Jquery Knob-->
+        <script src="{{asset('ui/backend/assets/bundles/jvectormap.bundle.js')}}"></script> <!-- JVectorMap Plugin Js -->
+        <script src="{{asset('ui/backend/assets/bundles/morrisscripts.bundle.js"')}}"></script> <!-- Morris Plugin Js --> 
+        <script src="{{asset('ui/backend/assets/bundles/sparkline.bundle.js')}}"></script> <!-- sparkline Plugin Js --> 
+        <script src="{{asset('ui/backend/assets/bundles/doughnut.bundle.js')}}"></script>
+        
+        <script src="{{asset('ui/backend/assets/bundles/mainscripts.bundle.js')}}"></script>
+        <script src="{{asset('ui/backend/assets/js/pages/index.js')}}"></script>
+       
 
 </body>
 </html>
