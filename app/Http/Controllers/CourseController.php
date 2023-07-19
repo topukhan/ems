@@ -12,7 +12,8 @@ class CourseController extends Controller
      */
     public function index()
     {
-        //
+        $courses =Course::all();
+        return view('backend.course.index',compact('courses'));
     }
 
     /**
@@ -28,7 +29,13 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Course::create([
+            "coursecode"=>$request->coursecode,
+            "coursename"=>$request->coursename,
+            "coursedesc"=>$request->coursedesc,
+        ]);
+
+        return redirect()->route('courses.index');
     }
 
     /**
@@ -44,7 +51,7 @@ class CourseController extends Controller
      */
     public function edit(Course $course)
     {
-        //
+        return view('backend.course.edit',compact('course'));
     }
 
     /**
@@ -52,7 +59,13 @@ class CourseController extends Controller
      */
     public function update(Request $request, Course $course)
     {
-        //
+        $course->update([
+            "coursecode"=>$request->coursecode,
+            "coursename"=>$request->coursename,
+            "coursedesc"=>$request->coursedesc,
+        ]);
+
+        return redirect()->route('courses.index');
     }
 
     /**
@@ -60,6 +73,8 @@ class CourseController extends Controller
      */
     public function destroy(Course $course)
     {
-        //
+        $course->delete();
+        return redirect()->route('courses.index');
+
     }
 }

@@ -102,7 +102,7 @@
             </div>
         </div>
     </div>
-    <div class="task-menu">
+    {{-- <div class="task-menu">
         <div class="slim_scroll">
             <div class="card tasks">
                 <div class="header">
@@ -150,7 +150,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <div id="rightsidebar" class="right-sidebar">
         <ul class="nav nav-tabs">
             <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#setting">Setting</a></li>        
@@ -341,7 +341,7 @@
                 </li>
                 <li class="header">MAIN</li>
                 <li class="active open"> <a href="index.html"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
-                <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>App</span> <span class="badge badge-success float-right">7</span></a>
+                {{-- <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>App</span> <span class="badge badge-success float-right">7</span></a>
                     <ul class="ml-menu">
                         <li><a href="mail-inbox.html">Inbox</a></li>
                         <li><a href="chat.html">Chat</a></li>
@@ -351,8 +351,8 @@
                         <li><a href="blog-dashboard.html">Blog</a></li>
                         <li><a href="app-ticket.html">Support Ticket</a></li>
                     </ul>
-                </li>
-                <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-swap-alt"></i><span>UI Elements</span> <span class="badge badge-default float-right">15</span></a>
+                </li> --}}
+                {{-- <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-swap-alt"></i><span>UI Elements</span> <span class="badge badge-default float-right">15</span></a>
                     <ul class="ml-menu">
                         <li><a href="ui_kit.html">UI KIT</a></li>                    
                         <li><a href="alerts.html">Alerts</a></li>                    
@@ -370,22 +370,33 @@
                         <li><a href="tabs.html">Tabs</a></li>
                         <li><a href="waves.html">Waves</a></li>
                     </ul>
-                </li>
-                <li class="header">FORMS, CHARTS, TABLES</li>
-                <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Forms</span> <span class="badge badge-warning float-right">9</span></a>
-                    <ul class="ml-menu">
-                        <li><a href="basic-form-elements.html">Basic Elements</a></li>
-                        <li><a href="advanced-form-elements.html">Advanced Elements</a></li>
+                </li> --}}
+
+
+
+
+                {{-- <li class="header">FORMS, CHARTS, TABLES</li> --}}
+                {{-- <li><a href="#" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Forms</span> <span class="badge badge-warning float-right">9</span></a>
+                    <ul class="ml-menu"> --}}
+                        <li><a href="#">Examinees</a></li>
+                        <li><a href="#">Subjects</a></li>
+                        <li><a href="{{ route('courses.index') }}">Course</a></li>
+                        {{-- <li><a href="advanced-form-elements.html">Advanced Elements</a></li>
                         <li><a href="form-examples.html">Form Examples</a></li>
                         <li><a href="form-validation.html">Form Validation</a></li>
                         <li><a href="form-wizard.html">Form Wizard</a></li>
                         <li><a href="form-editors.html">Editors</a></li>
                         <li><a href="form-upload.html">File Upload</a></li>
                         <li><a href="form-img-cropper.html">Image Cropper</a></li>
-                        <li><a href="form-summernote.html">Summernote</a></li>
-                    </ul>
-                </li>
-                <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-grid"></i><span>Tables</span> <span class="badge badge-info float-right">6</span></a>
+                        <li><a href="form-summernote.html">Summernote</a></li> --}}
+                    {{-- </ul>
+                </li> --}}
+
+
+
+
+
+                {{-- <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-grid"></i><span>Tables</span> <span class="badge badge-info float-right">6</span></a>
                     <ul class="ml-menu">                        
                         <li><a href="normal-tables.html">Normal Tables</a></li>
                         <li><a href="jquery-datatable.html">Jquery Datatables</a></li>
@@ -448,8 +459,8 @@
                         <li><a href="yandex.html">YandexMap</a></li>
                         <li><a href="jvectormap.html">jVectorMap</a></li>
                     </ul>
-                </li>                
+                </li>                 --}}
             </ul>
         </div>
-    </div>
+    </div>
 </aside>
