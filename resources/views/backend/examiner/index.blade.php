@@ -25,9 +25,9 @@
                         <thead>
                             <tr>
                                 <th>SL</th>
-                                <th>Course Name</th>
-                                <th>Course Code</th>
-                                <th>Course Description</th>
+                                <th>Examiner Name</th>
+                                <th>Examiner Email</th>
+                                <th>Examiner Phone</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -42,16 +42,16 @@
                             </tr>
                         </tfoot> --}}
                         <tbody>
-                            @foreach ($courses as $course )
+                            @foreach ($examiners as $examiner )
                             <tr>
                                 <td>{{$loop->iteration }}</td>
-                                <td>{{ $course->coursename }}</td>
-                                <td>{{ $course->coursecode }}</td>
-                                <td>{{ $course->coursedesc }}</td>
+                                <td>{{ $examiner->name }}</td>
+                                <td>{{ $examiner->email }}</td>
+                                <td>{{ $examiner->phone }}</td>
                                 <td>
-                                    <a class="btn btn-warning" href="{{ route('courses.edit',$course->id) }}">edit</a>
+                                    <a class="btn btn-warning" href="{{ route('examiners.edit',$examiner->id) }}">edit</a>
                                     <a class="btn btn-info" href="">show</a>
-                                    <form style="display:inline" action="{{route('courses.destroy',$course->id)}}" method="POST">
+                                    <form style="display:inline" action="{{route('examiners.destroy',$examiner->id)}}" method="POST">
                                         @csrf
                                         @method('delete')
                                         <button onclick="return confirmDelete()" type="submit" class="btn btn-danger">Delete</button>
@@ -76,5 +76,6 @@
         return confirm('Are you sure you want to delete this item?');
     }
 </script>
+
 
 </x-backend.layouts.master>

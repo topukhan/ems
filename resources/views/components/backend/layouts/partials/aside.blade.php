@@ -381,6 +381,7 @@
                         <li><a href="#">Examinees</a></li>
                         <li><a href="#">Subjects</a></li>
                         <li><a href="{{ route('courses.index') }}">Course</a></li>
+                        <li><a href="{{ route('examiners.index') }}">Examiners</a></li>
                         {{-- <li><a href="advanced-form-elements.html">Advanced Elements</a></li>
                         <li><a href="form-examples.html">Form Examples</a></li>
                         <li><a href="form-validation.html">Form Validation</a></li>
